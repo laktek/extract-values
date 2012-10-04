@@ -1,0 +1,37 @@
+{
+		"predef": [
+        "console"
+    ],
+		
+    "node" : true,
+    "es5" : true,
+
+    "curly": true,
+    "debug": false,
+    "devel": false,
+    "eqeqeq": true,
+    "evil": true,
+    "forin": true,
+    "immed": true,
+		"indent": 4,
+		"latedef": true,
+		"lastsemic": true,
+		"maxparams": 5,
+    "maxdepth": 3,
+    "maxcomplexity": 5,
+    "newcap": true,
+    "noarg": true,
+    "noempty": false,
+    "nonew": true,
+    "onevar": false,
+    "plusplus": false,
+		"quotmark": "double",
+    "regexp": true,
+    "undef": true,
+		"unused": true,
+		"smarttabs": true,
+    "sub": true,
+    "strict": false,
+		"trailing": false,
+    "white": false 
+}
