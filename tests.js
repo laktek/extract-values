@@ -10,6 +10,8 @@ var cases = [
 
 	[["/assets/images/logo.jpg", "{dirpath}/{basename}.{extension}"], { "dirpath": "/assets/images", "basename": "logo", "extension": "jpg" }],
 
+	[["some long file name.html.mustache", "{name}.{output_extension}.{template_extension}"], { "name": "some long file name", "output_extension": "html", "template_extension": "mustache" }],
+
 	[["Lakshan Perera <lakshan@web2media.net> (http://laktek.com)", "{name} <{email}> ({url})"], {"name": "Lakshan Perera", "email": "lakshan@web2media.net", "url": "http://laktek.com" }],
 
 	[["a:b,c:d", "a:{{a}},c:{{c}}", { delimeters: ["{{", "}}"] }], { "a": "b", "c": "d" }],
