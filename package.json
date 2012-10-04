@@ -2,11 +2,11 @@
   "name": "extract-values",
   "description": "A simple helper to extract values from a string based on a pattern.",
   "keywords": [
-		"regex",
-		"pattern matching",
-		"strings"
+    "regex",
+    "pattern matching",
+    "strings"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/laktek/extract-values",
   "author": "Lakshan Perera <lakshan@web2media.net> (http://laktek.com)",
   "licenses": "MIT",
