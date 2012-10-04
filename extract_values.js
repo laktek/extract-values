@@ -1,11 +1,11 @@
 var extractValues = function(str, pattern, options) {
 	options = options || {};
-	var delimeters = options.delimeters || ["{", "}"];
+	var delimiters = options.delimiters || ["{", "}"];
 	var lowercase = options.lowercase;
 	var whitespace = options.whitespace;
 
 	var special_chars_regex = /[\\\^\$\*\+\.\?\(\)]/g;
-	var token_regex = new RegExp( delimeters[0] + "([^" + delimeters.join("") + "\t\r\n]+)" + delimeters[1], "g");
+	var token_regex = new RegExp( delimiters[0] + "([^" + delimiters.join("") + "\t\r\n]+)" + delimiters[1], "g");
 	var tokens = pattern.match(token_regex);
 	var pattern_regex = new RegExp(pattern.replace(special_chars_regex, "\\$&").replace(token_regex, "(\.+)"));
 
@@ -32,7 +32,7 @@ var extractValues = function(str, pattern, options) {
 	matches = matches.splice(1);
 	var output = {};
 	for (var i=0; i < tokens.length; i++) {
-		output[tokens[i].replace( new RegExp( delimeters[0] + "|" + delimeters[1], "g"), "")] = matches[i];
+		output[tokens[i].replace( new RegExp( delimiters[0] + "|" + delimiters[1], "g"), "")] = matches[i];
 	}
 
 	return output;

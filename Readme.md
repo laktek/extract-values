@@ -12,7 +12,7 @@ This is a simple helper to extract values from a string based on a pattern.
 	extractValues("John Doe <john@example.com> (http://example.com)", "{name} <{email}> ({url})")
 	>> {"name": "John Doe", "email": "john@example.com", "url": "http://example.com" }
 
-	extractValues("from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] })
+	extractValues("from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimiters: ["`", "`"] })
 	>> {"from": "4th October", "to": "10th October" }
 
 	extractValues("Convert 1500 Grams to Kilograms", "convert {quantity} {from_unit} to {to_unit}", { lowercase: true })
@@ -42,7 +42,7 @@ This is a simple helper to extract values from a string based on a pattern.
 
 **lowercase** - coverts the input string to lowercase before matching.
 
-**delimeters** - If specify the delimeters used in the pattern to define the values. Default delimeters are `{` and `}`.
+**delimiters** - If specify the delimiters used in the pattern to define the values. Default delimiters are `{` and `}`.
 
 ### Licence
 
