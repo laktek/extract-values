@@ -14,6 +14,10 @@ This is a simple helper to extract values from a string based on a pattern.
 
 	extractValues("from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] })
 	>> {"from": "4th October", "to": "10th October" }
+
+	extractValues("Convert 1500 Grams to Kilograms", "convert {quantity} {from_unit} to {to_unit}", { lowercase: true })
+	>> {"quantity": "1500", "from_unit": "grams", "to_unit": "kilograms" }]
+
 ```
 
 ### How to Use
@@ -31,6 +35,14 @@ This is a simple helper to extract values from a string based on a pattern.
 ```
 
 * For client-side use, simply copy and paste the function (`extract_values.js`) in to your source.
+
+### Options
+
+**whitespace** - normalizes the whitespace in the input string, so it can be aligned with the given pattern. You can define the number of continous whitespaces to contain in the string. Making it zero (0) will remove all whitespaces.
+
+**lowercase** - coverts the input string to lowercase before matching.
+
+**delimeters** - If specify the delimeters used in the pattern to define the values. Default delimeters are `{` and `}`.
 
 ### Licence
 

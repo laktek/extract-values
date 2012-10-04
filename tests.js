@@ -20,7 +20,9 @@ var cases = [
 
 	[["from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], {"from": "4th October", "to": "10th October" }],
 
-	[["4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], null]
+	[["4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], null],
+
+	[["Convert 1500 Grams to Kilograms", "convert {quantity} {from_unit} to {to_unit}", { lowercase: true }], {"quantity": "1500", "from_unit": "grams", "to_unit": "kilograms" }]
 
 ]
 
