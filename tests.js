@@ -14,7 +14,9 @@ var cases = [
 
 	[["a:b,c:d", "a:{{a}},c:{{c}}", { delimeters: ["{{", "}}"] }], { "a": "b", "c": "d" }],
 
-	[["red  blue   green", "{first} {second} {third}", { whitespace: 1 }], {"first": "red", "second": "blue", "third": "green" }]
+	[["red  blue   green", "{first} {second} {third}", { whitespace: 1 }], {"first": "red", "second": "blue", "third": "green" }],
+
+	[["from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], {"from": "4th October", "to": "10th October" }]
 ]
 
 for (var i = 0; i < cases.length; i++) {

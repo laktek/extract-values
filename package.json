@@ -1,0 +1,21 @@
+{
+  "name": "extract-values",
+  "description": "A simple helper to extract values from a string based on a pattern.",
+  "keywords": [
+		"regex",
+		"pattern matching",
+		"strings"
+  ],
+  "version": "0.0.1",
+  "homepage": "https://github.com/laktek/extract-values",
+  "author": "Lakshan Perera <lakshan@web2media.net> (http://laktek.com)",
+  "licenses": "MIT",
+  "bugs": {
+    "url": "http://github.com/laktek/extract-values/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laktek/extract-values.git"
+  },
+  "main": "./lib/extract_values.js"
+}
