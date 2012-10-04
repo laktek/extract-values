@@ -12,8 +12,8 @@ This is a simple helper to extract values from a string based on a pattern.
 	extractValues("John Doe <john@example.com> (http://example.com)", "{name} <{email}> ({url})")
 	>> {"name": "John Doe", "email": "john@example.com", "url": "http://example.com" }
 
-	extractValues"from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }])
-	>> {"from": "4th October", "to": "10th October" }]
+	extractValues("from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] })
+	>> {"from": "4th October", "to": "10th October" }
 ```
 
 ### How to Use
