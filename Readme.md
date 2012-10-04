@@ -27,7 +27,7 @@ This is a simple helper to extract values from a string based on a pattern.
 * Then `require` in your project.
 	
 ```javascript
-	var extractValues = require("extractValues");
+	var extractValues = require("extract-values");
 ```
 
 * For client-side use, simply copy and paste the function (`extract_values.js`) in to your source.

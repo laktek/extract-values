@@ -16,7 +16,10 @@ var cases = [
 
 	[["red  blue   green", "{first} {second} {third}", { whitespace: 1 }], {"first": "red", "second": "blue", "third": "green" }],
 
-	[["from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], {"from": "4th October", "to": "10th October" }]
+	[["from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], {"from": "4th October", "to": "10th October" }],
+
+	[["4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimeters: ["`", "`"] }], null]
+
 ]
 
 for (var i = 0; i < cases.length; i++) {

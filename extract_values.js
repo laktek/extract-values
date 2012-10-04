@@ -18,7 +18,13 @@ var extractValues = function(str, pattern, options) {
 		});
 	};
 
-	var matches = str.match(pattern_regex).splice(1);
+	var matches = str.match(pattern_regex)
+
+	if (!matches) {
+		return null;
+	}
+
+	matches = matches.splice(1);
 	var output = {};
 	for (var i=0; i < tokens.length; i++) {
 		output[tokens[i].replace( new RegExp( delimeters[0] + "|" + delimeters[1], "g"), "")] = matches[i];
