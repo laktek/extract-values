@@ -17,5 +17,5 @@
     "type": "git",
     "url": "https://github.com/laktek/extract-values.git"
   },
-  "main": "./lib/extract_values.js"
+  "main": "./extract_values.js"
 }
