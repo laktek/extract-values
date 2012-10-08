@@ -18,6 +18,8 @@ var cases = [
 
 	[["red  blue   green", "{first} {second} {third}", { whitespace: 1 }], {"first": "red", "second": "blue", "third": "green" }],
 
+	[["red\n blue\n\ngreen", "{first}\n{second}\n{third}", { whitespace: 1 }], {"first": "red", "second": "blue", "third": "green" }],
+
 	[["from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimiters: ["`", "`"] }], {"from": "4th October", "to": "10th October" }],
 
 	[["4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimiters: ["`", "`"] }], null],
