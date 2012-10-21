@@ -50,8 +50,6 @@ This is a simple helper to extract values from a string based on a pattern.
 </html>
 ```
 
-* For client-side use, simply copy and paste the function (`extract_values.js`) in to your source.
-
 ### Options
 
 **whitespace** - normalizes the whitespace in the input string, so it can be aligned with the given pattern. You can define the number of continous whitespaces to contain in the string. Making it zero (0) will remove all whitespaces.
