@@ -22,7 +22,7 @@ This is a simple helper to extract values from a string based on a pattern.
 
 ### How to Use
 
-* Install as a NPM package
+#### Install as a NPM package
 
 ```
 	npm install extract-values
@@ -32,6 +32,22 @@ This is a simple helper to extract values from a string based on a pattern.
 	
 ```javascript
 	var extractValues = require("extract-values");
+```
+
+#### Use with web apps (in Browser)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src='extract_values.js'></script>
+	<script type="text/javascript">
+		var parsedDate = extractValues("/2012/08/12/test.html", "/{year}/{month}/{day}/{title}.html")
+		//{ "year": "2012", "month": "08", "day": "12", "title": "test" }
+	</script>
+</head>
+<body></body>
+</html>
 ```
 
 * For client-side use, simply copy and paste the function (`extract_values.js`) in to your source.
