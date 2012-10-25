@@ -30,6 +30,11 @@
 		if (!matches) {
 			return null;
 		}
+		
+    // Allow exact string matches to return an empty object instead of null
+    if (!tokens) {
+      return (str == pattern) ? {} : null
+    }
 
 		matches = matches.splice(1);
 		var output = {};
