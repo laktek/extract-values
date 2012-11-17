@@ -54,7 +54,7 @@ This is a simple helper to extract values from a string based on a pattern.
 
 **whitespace** - normalizes the whitespace in the input string, so it can be aligned with the given pattern. You can define the number of continous whitespaces to contain in the string. Making it zero (0) will remove all whitespaces.
 
-**lowercase** - coverts the input string to lowercase before matching.
+**lowercase** - converts the input string to lowercase before matching.
 
 **delimiters** - If specify the delimiters used in the pattern to define the values. Default delimiters are `{` and `}`.
 
