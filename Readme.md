@@ -6,17 +6,17 @@ This is a simple helper to extract values from a string based on a pattern.
 
 ```javascript
 
-	extractValues("/2012/08/12/test.html", "/{year}/{month}/{day}/{title}.html")
-	>> { "year": "2012", "month": "08", "day": "12", "title": "test" }
+    extractValues("/2012/08/12/test.html", "/{year}/{month}/{day}/{title}.html")
+    >> { "year": "2012", "month": "08", "day": "12", "title": "test" }
 
-	extractValues("John Doe <john@example.com> (http://example.com)", "{name} <{email}> ({url})")
-	>> {"name": "John Doe", "email": "john@example.com", "url": "http://example.com" }
+    extractValues("John Doe <john@example.com> (http://example.com)", "{name} <{email}> ({url})")
+    >> {"name": "John Doe", "email": "john@example.com", "url": "http://example.com" }
 
-	extractValues("from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimiters: ["`", "`"] })
-	>> {"from": "4th October", "to": "10th October" }
+    extractValues("from 4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimiters: ["`", "`"] })
+    >> {"from": "4th October", "to": "10th October" }
 
-	extractValues("Convert 1500 Grams to Kilograms", "convert {quantity} {from_unit} to {to_unit}", { lowercase: true })
-	>> {"quantity": "1500", "from_unit": "grams", "to_unit": "kilograms" }]
+    extractValues("Convert 1500 Grams to Kilograms", "convert {quantity} {from_unit} to {to_unit}", { lowercase: true })
+    >> {"quantity": "1500", "from_unit": "grams", "to_unit": "kilograms" }]
 
 ```
 
@@ -25,13 +25,13 @@ This is a simple helper to extract values from a string based on a pattern.
 #### Install as a NPM package
 
 ```
-	npm install extract-values
+    npm install extract-values
 ```
 
 * Then `require` in your project.
-	
+    
 ```javascript
-	var extractValues = require("extract-values");
+    var extractValues = require("extract-values");
 ```
 
 #### Use with web apps (in Browser)
@@ -40,14 +40,22 @@ This is a simple helper to extract values from a string based on a pattern.
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src='extract_values.js'></script>
-	<script type="text/javascript">
-		var parsedDate = extractValues("/2012/08/12/test.html", "/{year}/{month}/{day}/{title}.html")
-		//{ "year": "2012", "month": "08", "day": "12", "title": "test" }
-	</script>
+    <script type="text/javascript" src='extract_values.js'></script>
+    <script type="text/javascript">
+        var parsedDate = extractValues("/2012/08/12/test.html", "/{year}/{month}/{day}/{title}.html")
+        //{ "year": "2012", "month": "08", "day": "12", "title": "test" }
+    </script>
 </head>
 <body></body>
 </html>
+```
+
+### Unit Tests
+
+Run `node tests.js`.
+
+```$ node tests.js
+14 tests pass
 ```
 
 ### Options
