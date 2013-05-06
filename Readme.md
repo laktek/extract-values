@@ -54,7 +54,8 @@ This is a simple helper to extract values from a string based on a pattern.
 
 Run `node tests.js`.
 
-```$ node tests.js
+```shell
+$ node tests.js
 14 tests pass
 ```
 
