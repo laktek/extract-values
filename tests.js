@@ -25,11 +25,11 @@ var cases = [
   [["4th October  to 10th  October", "from `from` to `to`", { whitespace: 1, delimiters: ["`", "`"] }], null],
 
   [["Convert 1500 Grams to Kilograms", "convert {quantity} {from_unit} to {to_unit}", { lowercase: true }], {"quantity": "1500", "from_unit": "grams", "to_unit": "kilograms" }],
-  
+
   [["same thing", "same thing"], {}],
-    
+
   [["/app/les", "/app"], null]
-]
+];
 
 for (var i = 0; i < cases.length; i++) {
   assert.deepEqual(extract_values.apply(this, cases[i][0]), cases[i][1]);

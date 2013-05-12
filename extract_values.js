@@ -20,20 +20,20 @@
 				var whitespace_str = "";
 				for (var i = 0; i < whitespace; i++) {
 					whitespace_str = whitespace_str + match.charAt(0);
-				};
+				}
 				return whitespace_str;
 			});
-		};
+		}
 
-		var matches = str.match(pattern_regex)
+		var matches = str.match(pattern_regex);
 
 		if (!matches) {
 			return null;
 		}
-		
+
     // Allow exact string matches to return an empty object instead of null
     if (!tokens) {
-      return (str == pattern) ? {} : null
+      return (str === pattern) ? {} : null;
     }
 
 		matches = matches.splice(1);
@@ -43,12 +43,12 @@
 		}
 
 		return output;
-	}
+	};
 
-	if(typeof(window) != 'undefined') {
+	if(typeof(window) !== "undefined") {
 		window.extractValues = extractValues;
 	} else {
 		module.exports = extractValues;
 	}
-	
+
 })();
