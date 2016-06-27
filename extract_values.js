@@ -39,7 +39,7 @@
 		matches = matches.splice(1);
 		var output = {};
 		for (var i=0; i < tokens.length; i++) {
-			output[tokens[i].replace( new RegExp( delimiters[0] + "|" + delimiters[1], "g"), "")] = matches[i];
+			output[tokens[i].replace( new RegExp( delimiters[0] + "|" + delimiters[1], "g"), "").trim()] = matches[i];
 		}
 
 		return output;
