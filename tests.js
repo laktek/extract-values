@@ -28,8 +28,13 @@ var cases = [
 
   [["same thing", "same thing"], {}],
 
-  [["/app/les", "/app"], null]
-];
+  [["/app/les", "/app"], null],
+
+  [[
+  "<h1 class=\"p-title\">This is a title.</h1><data class=\"p-name\" value=\"This is a name\"></data>",
+  "<h1 class=\"p-title\"><%= title %></h1><data class=\"p-name\" value=\"<%= name %>\"></data>",
+  { delimiters: ["<%=","%>"]}],{ title: 'This is a title.', name:'This is a name'}
+  ]];
 
 for (var i = 0; i < cases.length; i++) {
   assert.deepEqual(extract_values.apply(this, cases[i][0]), cases[i][1]);
